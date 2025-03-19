@@ -1,0 +1,141 @@
+=========================================
+RETOMADA
+=========================================
+
+Para garantir um bom equilíbrio entre planejamento e execução, é essencial ajustar esse balanceamento. O planejamento deve sempre ser o ponto de partida.
+
+Planejar em excesso pode reduzir o tempo de execução. Por outro lado, executar sem planejamento adequado pode levar a erros e retrabalho. Por isso, é fundamental questionar e avaliar constantemente todas as áreas envolvidas.
+
+=========================================
+ATIVIDADE EM EQUIPE
+=========================================
+
+Professor: Hélio Kamakawa
+Disciplina: Análise de Projetos de Sistemas
+Data: 18/03/25
+
+Tema: Projeto de Software
+
+Descrição: Buscar fontes confiáveis e referenciá-las no diário de aula.
+Objetivo: Encontrar pelo menos três exemplos diferentes de ciclos de vida de desenvolvimento de software (SDLC). Para cada um, identificar as fases de planejamento e execução.
+
+Fontes confiáveis incluem:
+- Livros
+- Artigos
+- Sites oficiais
+
+Também abordaremos metodologias ágeis dentro desse contexto.
+
+Tempo para conclusão: 30 minutos
+
+=========================================
+MODELOS DE CICLO DE VIDA DE DESENVOLVIMENTO DE SOFTWARE (SDLC)
+=========================================
+
+-----------------------------------------
+1. Modelo Cascata
+-----------------------------------------
+
+Metodologia:
+A metodologia em cascata segue um fluxo linear e sequencial de etapas, incluindo levantamento de requisitos, planejamento, modelagem, desenvolvimento, testes e implantação.
+
+Levantamento de Requisitos:
+- Compreensão do propósito do software
+- Definição das funcionalidades com base nas necessidades do cliente
+- Estabelecimento do escopo do projeto
+
+Planejamento:
+- Definição de tecnologias e linguagens de programação
+- Distribuição de tarefas na equipe
+- Estimativa de prazos e orçamento
+
+Modelagem:
+- Estruturação do sistema (classes, interfaces, banco de dados)
+- Produção de documentação para guiar o desenvolvimento
+
+Desenvolvimento:
+- Codificação do software conforme os requisitos estabelecidos
+
+Testes:
+- Verificação de funcionamento e consistência
+- Correção de possíveis erros
+
+Implantação:
+- Entrega ao cliente e suporte inicial
+- Manutenção e atualizações futuras
+
+-----------------------------------------
+2. Modelo Iterativo
+-----------------------------------------
+
+Metodologia:
+Desenvolvimento em ciclos contínuos, permitindo melhorias e ajustes conforme necessário.
+
+Planejamento:
+- Definição inicial de requisitos
+- Divisão do projeto em iterações menores
+- Estabelecimento de prioridades
+
+Execução:
+- Desenvolvimento incremental por ciclos
+- Testes contínuos para garantir a funcionalidade
+- Ajustes baseados no feedback recebido
+
+-----------------------------------------
+3. Modelo Kanban
+-----------------------------------------
+
+Metodologia:
+Kanban é uma abordagem visual para gerenciamento de projetos, focada na otimização do fluxo de trabalho.
+
+Planejamento:
+- Identificação das tarefas necessárias
+- Priorização e categorização das atividades
+
+Execução:
+- Utilização de um quadro Kanban (To Do, Doing, Done)
+- Monitoramento do progresso de cada tarefa
+- Ajustes contínuos para otimização
+
+=========================================
+MODELOS ÁGEIS
+=========================================
+
+Os modelos ágeis são abordagens flexíveis para o desenvolvimento de software, focadas na entrega incremental, colaboração contínua e adaptação a mudanças. Diferentemente dos modelos tradicionais, como o Cascata, os métodos ágeis permitem ajustes ao longo do processo, reduzindo riscos e aumentando a eficiência.
+
+Principais características: 
+- Desenvolvimento iterativo e incremental  
+- Feedback constante dos stakeholders  
+- Entregas contínuas e de valor ao cliente  
+- Adaptação rápida a mudanças nos requisitos  
+
+Exemplos de metodologias ágeis:  
+-Scrum: Organização do trabalho em ciclos curtos chamados sprints, com reuniões diárias para acompanhamento.  
+- Kanban: Gestão visual de tarefas para otimização do fluxo de trabalho.  
+- XP (Extreme Programming): Foco em práticas como programação em par e testes automatizados para garantir qualidade.  
+
+Os modelos ágeis são amplamente adotados no mercado por sua eficiência e capacidade de adaptação às necessidades do cliente.
+
+=========================================
+MODELO BÁSICO DO SDLC
+=========================================
+
+1. Levantamento de dados - Compreensão das necessidades do cliente
+2. Análise de requisitos - Identificação dos elementos essenciais do projeto
+3. Modelagem do Software - Planejamento da estrutura do sistema
+4. Codificação - Desenvolvimento do software
+5. Testagem - Verificação da funcionalidade do sistema
+6. Implantação - Disponibilização para uso
+7. Manutenção - Atualizações e correções ao longo do ciclo de vida
+
+=========================================
+FONTES
+=========================================
+
+Tera. "Modelo Cascata." Disponível em: <https://blog.somostera.com/desenvolvimento-web/modelo-cascata>. Acesso em: 18 mar. 2025.
+
+IFSC. "Ciclo de Vida Iterativo e Incremental." Disponível em: <https://wiki.sj.ifsc.edu.br/index.php/Ciclo_de_Vida_Iterativo_e_Incremental>. Acesso em: 18 mar. 2025.
+
+Atlassian. "Kanban: uma breve introdução." Disponível em: https://www.atlassian.com/pt/agile/kanban. Acesso em: 18 mar. 2025.
+
+Agile Manifest Hub." Disponível em: http://agilemanifest.com/. Acesso em: 18 mar. 2025.
