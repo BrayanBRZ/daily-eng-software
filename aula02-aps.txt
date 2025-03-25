@@ -12,6 +12,7 @@ ATIVIDADE EM EQUIPE
 
 Professor: Hélio Kamakawa
 Disciplina: Análise de Projetos de Sistemas
+Alunos: Brayan Barros e Gabriel dos Anjos
 Data: 18/03/25
 
 Tema: Projeto de Software
