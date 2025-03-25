@@ -130,6 +130,37 @@ MODELO BÁSICO DO SDLC
 7. Manutenção - Atualizações e correções ao longo do ciclo de vida
 
 =========================================
+METODOLOGIA E PROCESSOS AUXILIARES
+=========================================
+
+Kanban e Scrum são duas metodologias ágeis que ajudam equipes a gerenciar e organizar seu trabalho de maneira mais eficiente, porém cada uma tem abordagens distintas.
+
+Definição:
+
+- Scrum é uma estrutura ágil que organiza o trabalho em ciclos chamados sprints (geralmente de 1 a 4 semanas), onde a equipe foca em entregar um incremento de produto ao final de cada sprint.
+- Kanban é um método visual para gerenciar o fluxo de trabalho, que foca na melhoria contínua e na flexibilidade.
+
+Diferenças:
+
+- Tempo
+Scrum: Trabalha em ciclos fixos(sprints).
+Kanban: Possui um fluxo contínuo que fornece uma maior flexibilidade de tempo.
+
+- Estrutura
+Scrum: Exige papéis específicos (Scrum Master, Product Owner, etc.) e cerimônias (planejamento, revisões).
+Kanban: Não exige nenhum tipo de cerimônias ou papéis específicos.
+
+- Planejamento
+Scrum: Planeja as tarefas a serem feitas durante cada sprint.
+Kanban: As tarefas são puxadas para o fluxo de trabalho conforme a capacidade da equipe.
+
+Conclusão:
+
+Scrum: É mais adequado para equipes que preferem trabalhar em ciclos fixos e com uma estrutura mais rigorosa e organizada, com objetivos definidos a cada sprint(os ciclos devem ser bem definidos, pois qualquer erro pode prejudicar diretamente o projeto).
+
+Kanban: É mais adequado para fluxos de trabalho contínuos e flexíveis, onde as prioridades podem mudar rapidamente, e o trabalho é gerido visualmente.
+
+=========================================
 FONTES
 =========================================
 
