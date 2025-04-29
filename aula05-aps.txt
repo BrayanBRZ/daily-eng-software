@@ -2,12 +2,12 @@
 ATIVIDADE EM EQUIPE
 =========================================
 
- Professor: Hélio Kamakawa
- Disciplina: Análise de Projetos de Sistemas
- Alunos: Brayan Barros e Gabriel Lucim
- Data: 08/04/25
- 
- Tema: Diagrama de Classes e Caso de Uso
+Professor: Hélio Kamakawa
+Disciplina: Análise de Projetos de Sistemas
+Alunos: Brayan Barros e Gabriel Lucim
+Data: 08/04/25
+
+Tema: Diagrama de Classes e Caso de Uso
 
 =========================================================
 UML estruturais (classe) e comportamentais (caso de uso)
