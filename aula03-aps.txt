@@ -1,0 +1,82 @@
+=========================================
+ATIVIDADE EM EQUIPE
+=========================================
+
+Professor: Hélio Kamakawa
+Disciplina: Análise de Projetos de Sistemas
+Alunos: Brayan Barros e Gabriel Lucim
+Data: 01/04/25
+
+Tema: Levantamento de Requisitos - Empréstimo de Materiais (Edmar)
+
+=========================================
+LEVANTAMENTO DE REQUISISTOS
+=========================================
+
+-----------------------------------------
+Cadastro de Usuários:
+-----------------------------------------
+- Número de identificação do usuário
+- Nome
+- Ocupação (Aluno, Professor, Funcionário, etc.)
+- Matrícula (apenas para alunos ou um campo genérico para outros tipos de ocupação)
+- Nota (Avaliação ou histórico de empréstimos)
+- Email (para comunicação e alertas)
+- Telefone (para contato emergencial)
+- Status do usuário (Ativo, Suspenso, Inativo)
+
+-----------------------------------------
+Cadastro de Equipamentos:
+-----------------------------------------
+- Número de identificação do equipamento
+- Nome
+- Classe do equipamento (ex: Instrumento musical, Calculadora, etc.)
+- Descrição (detalhamento do equipamento)
+- Estado de conservação (Novo, Usado, Danificado, etc.)
+- Localização (Onde o equipamento está armazenado)
+- Nota (Avaliação do estado ou histórico de manutenção)
+- Categoria (Tecnologia, Mobiliário, Instrumentos, etc.)
+- Data de aquisição (controle do tempo de uso)
+- Histórico de manutenção (se houver)
+
+-----------------------------------------
+Cadastro de Locais:
+-----------------------------------------
+- Número de identificação do local
+- Nome (ex: Auditório, Sala de Reuniões, etc.)
+- Localização (ex: Bloco A - Sala 101)
+- Capacidade (número máximo de pessoas)
+- Equipamento disponível (quais equipamentos estão disponíveis no local)
+- Estado de conservação (como no cadastro de equipamentos)
+- Nota (avaliação do estado)
+- Horário de funcionamento (se relevante)
+- Regras específicas (caso o local tenha regras específicas para empréstimo)
+
+-----------------------------------------
+Controle de Equipamentos Emprestados:
+-----------------------------------------
+- Número de identificação do empréstimo
+- Número de identificação do usuário
+- Número de identificação do equipamento
+- Data de requisição do empréstimo
+- Data de devolução prevista
+- Data de devolução efetiva
+- Estado de conservação na devolução
+- Nota do equipamento na devolução (para comparar com o estado inicial)
+- Status do empréstimo (Ativo, Concluído, Atrasado, Cancelado, etc.)
+- Motivo do empréstimo (opcional, para registrar a razão do empréstimo, especialmente para itens caros)
+
+-----------------------------------------
+Controle de Locais Emprestados:
+-----------------------------------------
+- Número de identificação do empréstimo
+- Número de identificação do usuário
+- Número de identificação do local
+- Data de requisição do empréstimo
+- Data do empréstimo
+- Horário de empréstimo
+- Data e hora de devolução (se o local tiver tempo de uso restrito)
+- Estado de conservação na devolução
+- Nota (avaliação do estado)
+- Status do empréstimo (Ativo, Concluído, Atrasado, Cancelado, etc.)
+- Equipamentos requisitados para o local (se aplicável)
