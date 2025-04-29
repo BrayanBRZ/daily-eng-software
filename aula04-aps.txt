@@ -1,6 +1,7 @@
 =========================================
 ATIVIDADE EM EQUIPE
 =========================================
+
  Professor: Hélio Kamakawa
  Disciplina: Análise de Projetos de Sistemas
  Alunos: Gabriel dos Anjos Lucim e Brayan Barros
@@ -8,11 +9,9 @@ ATIVIDADE EM EQUIPE
  
  Tema: Levantamento e Análise de requisitos
 
-
- -----------------------------------------
+-----------------------------------------
  ESTRUTURA DE FASES
- -----------------------------------------
-
+-----------------------------------------
 
  1 – Rastreabilidade
  2 – Identificação do Requisito Principal
@@ -22,45 +21,36 @@ ATIVIDADE EM EQUIPE
  6 – Funcionalidades Fora do Escopo Inicial
  7 – Validação e Verificação
 
-
-------------------------------------------
+-----------------------------------------
 Definição dos códigos identificadores:
-
 
 → LRP000 - Levantamento de Requisitos Principal e a sequência numérica
 → LRE000 - Levantamento de Requisitos Específico e a sequência numérica
 
-
- ------------------------------------------
+-----------------------------------------
  DEFINIÇÃO DE FASES
- ------------------------------------------
- ------------------------
+-----------------------------------------
  Fase 1 – Rastreabilidade
-
 
  - Atribuição de códigos únicos e criação de um mapa de conexão entre requisitos principais e específicos
  - Garantir que todos os requisitos sejam identificados de forma única e rastreável, evitando confusões e facilitando a gestão do projeto
  ------------------------
  Fase 2 – Identificação do Requisito Principal
 
-
  - Definir claramente as necessidades principais que o sistema deve atender, estabelecendo uma base sólida para o desenvolvimento dos requisitos detalhados
  - Identificação e documentação dos requisitos principais do sistema, com foco no que é essencial para o sucesso do projeto
  ------------------------
  Fase 3 – Especificação
-
 
  - Transformar os requisitos principais em requisitos específicos e detalhados, descrevendo as funcionalidades e comportamentos de forma clara e precisa
  - Decomposição de requisitos principais em requisitos mais específicos, com um nível de detalhamento adequado para guiar o desenvolvimento
  ------------------------
  Fase 4 – Identificação dos Atores
 
-
  - Definir quem são os usuários ou sistemas que irão interagir com o sistema e como essas interações serão feitas
  - Identificação dos diferentes tipos de usuários e suas interações com os requisitos específicos do sistema
  ------------------------
  Fase 5 – Complementação Funcional
-
 
  (Adição de funcionalidades complementares que agregam valor ao sistema e atendem a necessidades adicionais que podem não ter sido consideradas nas fases anteriores)
  - Adicionar funcionalidades extras que atendam a necessidades complementares, melhorando a experiência geral ou a performance do sistema
@@ -68,33 +58,26 @@ Definição dos códigos identificadores:
  ------------------------
  Fase 6 – Funcionalidades Fora do Escopo Inicial
 
-
 Inclusão de funcionalidades que vão além do escopo inicial do projeto.
 Embora essas funcionalidades não sejam necessárias para o lançamento ou entrega imediata do sistema, elas podem ser consideradas de valor para o produto final.
 Essas funcionalidades geralmente são ideias que surgem durante o processo de desenvolvimento ou feedback de usuários e stakeholders.
-
 
 - Identificar e adicionar funcionalidades que não estavam no escopo original, mas que podem ser valiosas para o sistema
 - Definição de funcionalidades que ficam fora do escopo inicial, mas que podem ser consideradas para inclusão em versões futuras ou como extras
 ------------------------
 Fase 7 – Validação e Verificação
 
-
 - Validar e verificar que todos os requisitos foram corretamente implementados e que o sistema funciona conforme o esperado
 - Realização de testes, revisões e validações para garantir que todos os requisitos foram atendidos e que o sistema está pronto para ser entregue
- 
 
-
------------------------------------------
+------------------------------------------------------
 LEVANTAMENTO DE REQUISISTOS (Baseado na aula passada)
------------------------------------------
-------------------------
+------------------------------------------------------
 1. Cadastro de Usuários
    
 Requisitos Principais:
 [LRP001] O sistema deve permitir o cadastro de diferentes tipos de usuários (Aluno, Professor, Funcionário, etc.)
 [LRP002] O sistema deve ser capaz de gerar um número de identificação único para cada usuário
-
 
 Requisitos Específicos:
 [LRE001] Permitir a inserção do nome do usuário
@@ -105,14 +88,11 @@ Requisitos Específicos:
 [LRE006] Permitir a inclusão de número de telefone para contato emergencial
 [LRE007] Permitir a definição do status do usuário (Ativo, Suspenso, Inativo)
 
-
 ------------------------
 2. Cadastro de Equipamentos
 
-
 Requisitos Principais:
 [LRP003] O sistema deve permitir o cadastro de equipamentos, com um identificador único para cada item
-
 
 Requisitos Específicos:
 [LRE008] Permitir a inserção do nome do equipamento
@@ -125,13 +105,11 @@ Requisitos Específicos:
 [LRE015] Permitir o registro da data de aquisição do equipamento
 [LRE016] Permitir o acompanhamento do histórico de manutenção do equipamento (se houver)
 
-
 ------------------------
 3. Cadastro de Locais
    
 Requisitos Principais:
 [LRP004] O sistema deve permitir o cadastro de locais, com identificador único e detalhes relacionados à capacidade e equipamentos disponíveis
-
 
 Requisitos Específicos:
 [LRE017] Permitir a inserção do nome do local (ex: Auditório, Sala de Reuniões, etc.)
@@ -143,13 +121,11 @@ Requisitos Específicos:
 [LRE023] Permitir a inserção dos horários de funcionamento do local, se relevante
 [LRE024] Permitir a definição de regras específicas para o empréstimo do local (se houver)
 
-
 ------------------------
 4. Controle de Equipamentos Emprestados
    
 Requisitos Principais:
 [LRP005] O sistema deve permitir o controle de empréstimos de equipamentos, com registro de todos os detalhes do empréstimo
-
 
 Requisitos Específicos:
 [LRE025] Permitir a criação de um número de identificação único para cada empréstimo
@@ -163,13 +139,11 @@ Requisitos Específicos:
 [LRE033] Permitir o controle do status do empréstimo (Ativo, Concluído, Atrasado, Cancelado, etc.)
 [LRE034] Permitir a inclusão de um campo opcional para o motivo do empréstimo
 
-
 ------------------------
 5. Controle de Locais Emprestados
    
 Requisitos Principais:
 [LRP006] O sistema deve permitir o controle de empréstimos de locais, com registro de todos os detalhes sobre o empréstimo do espaço
-
 
 Requisitos Específicos:
 [LRE035] Permitir a criação de um número de identificação único para cada empréstimo de local
