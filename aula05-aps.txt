@@ -1,0 +1,133 @@
+=========================================
+ATIVIDADE EM EQUIPE
+=========================================
+
+ Professor: Hélio Kamakawa
+ Disciplina: Análise de Projetos de Sistemas
+ Alunos: Brayan Barros e Gabriel Lucim
+ Data: 08/04/25
+ 
+ Tema: Diagrama de Classes e Caso de Uso
+
+=========================================================
+UML estruturais (classe) e comportamentais (caso de uso)
+=========================================================
+
+-----------------------------------------
+ DIAGRAMA VS CODE
+-----------------------------------------
+
+@startuml
+left to right direction
+
+actor cli as "Cliente"
+actor adm as "Administrador"
+actor gen as "Gerente"
+
+rectangle "Sistema de Reserva de Quadra" {
+    usecase "Consultar calendário" as c01
+    usecase "Buscar reserva" as c02
+    usecase "Realizar reserva" as c03
+    usecase "Verificar disponibilidade" as c04
+    usecase "Cancelar reserva" as c05
+    usecase "Gerenciar todas reservas" as c06
+    usecase "Cadastrar quadra" as c07
+    usecase "Cancelar Cadastro" as c08
+    usecase "Buscar Cadastro" as c09
+    usecase "Visualizar Quadra" as c10
+    usecase "Buscar Avaliações" as c11
+    usecase "Realizar Avaliação" as c12
+
+
+    c03 .> c04 : <<include>>
+    c05 <. c02 : <<extends>>
+    c10 .> c11 : <<include>>
+    c12 .> c02 : <<include>>
+    c11 .> c02 : <<extends>>
+    c09 .> c08 : <<extends>>
+}
+
+cli --> c01
+cli --> c02
+cli --> c03
+cli --> c04
+cli --> c05
+cli --> c10
+cli --> c11
+cli --> c12
+
+
+adm --|> cli
+adm --> c06
+adm --> c07
+adm --> c08
+adm --> c09
+
+
+gen --|> adm
+
+@enduml
+/'#comments
+Consultar calendário
+Buscar reserva
+Realizar reserva
+Verificar disponibilidade
+Cancelar reserva
+Gerenciar todas reservas
+Cadastrar quadra
+/'
+
+-----------------------------------------
+SEGUNDA VERSÃO
+-----------------------------------------
+
+@startuml
+left to right direction
+
+actor cli as "Cliente"
+actor adm as "Administrador"
+actor gen as "Gerente"
+
+rectangle "Sistema de Reserva de Quadra" {
+
+    usecase c01 as "Consultar calendário"
+    usecase c02 as "Buscar reserva"
+    usecase c03 as "Realizar reserva"
+    usecase c04 as "Verificar disponibilidade"
+    usecase c05 as "Cancelar reserva"
+    usecase c06 as "Gerenciar todas reservas"
+    usecase c07 as "Cadastrar quadra"
+    usecase c08 as "Cancelar Cadastro"
+    usecase c09 as "Buscar Cadastro"
+    usecase c10 as "Visualizar Quadra"
+    usecase c11 as "Buscar Avaliações"
+    usecase c12 as "Realizar Avaliação"
+
+    ' INCLUDES (obrigatórios)
+    c03 .> c04 : <<include>>
+    c12 .> c02 : <<include>>
+    c08 .> c09 : <<include>>
+
+    ' EXTENDS (opcionais)
+    c05 <. c02 : <<extend>>
+    c11 <. c10 : <<extend>>
+    c06 <. c05 : <<extend>>
+}
+
+cli --> c01
+cli --> c02
+cli --> c03
+cli --> c04
+cli --> c05
+cli --> c10
+cli --> c11
+cli --> c12
+
+adm --|> cli
+adm --> c06
+adm --> c07
+adm --> c08
+adm --> c09
+
+gen --|> adm
+@enduml
