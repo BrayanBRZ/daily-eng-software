@@ -2,12 +2,12 @@
 ATIVIDADE EM EQUIPE
 =========================================
 
- Professor: Hélio Kamakawa
- Disciplina: Análise de Projetos de Sistemas
- Alunos: Brayan Barros e Gabriel dos Anjos
- Data: 08/04/25
+Professor: Hélio Kamakawa
+Disciplina: Análise de Projetos de Sistemas
+Alunos: Brayan Barros e Gabriel dos Anjos
+Data: 08/04/25
  
- Tema: Levantamento e Análise de requisitos
+Tema: Levantamento e Análise de requisitos
 
 -----------------------------------------
  ESTRUTURA DE FASES
