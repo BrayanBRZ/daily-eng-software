@@ -1,0 +1,105 @@
+=========================================
+RETOMADA
+=========================================
+
+O ciclo de vida de software descreve as etapas pelas quais o software passa, desde a sua concepção até a manutenção pós-implantação. Como qualquer projeto, é essencial equilibrar as fases de planejamento e execução para garantir que o desenvolvimento seja bem-sucedido, sem comprometer a qualidade ou o tempo de entrega. A escolha do modelo certo para o SDLC pode otimizar tanto o processo de planejamento quanto a execução.
+
+=========================================
+ATIVIDADE EM EQUIPE
+=========================================
+
+Professor: Hélio Kamakawa  
+Disciplina: Análise de Projetos de Sistemas  
+Alunos: Brayan Barros e Gabriel Lucim
+Data: 25/03/25  
+
+Tema: Levantamento de Requisitos.
+
+Descrição: Pesquisa sobre técnicas de levantamento de requisitos, análise documental, entrevistas, etnografia, observação, questionário, workshops, joint application design, prototipação e busca de históricos anteriores.  
+Objetivo: Compreender as diversas técnicas de levantamento de requisitos e saber em que contextos cada uma é mais adequada. 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+• Por qual motivo estudar/entender a evolução do desenvolvimento de software?
+	Estudar modelos tradicionais ajuda a entender a evolução do desenvolvimento de software e como abordagens atuais surgiram. Alguns modelos antigos ainda são aplicados em projetos com requisitos bem definidos.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+=========================================
+LEVANTAMENTO DE DADOS E ANÁLISE DE DADOS
+=========================================
+
+Levantamento de dados: Refere-se à coleta de informações de diversas fontes, como entrevistas, questionários e observação. É uma etapa inicial que visa reunir dados brutos necessários para compreender o contexto de um projeto.
+
+Análise de dados: Envolve o estudo detalhado dessas informações coletadas, com o objetivo de extrair conclusões significativas, identificar padrões e tomar decisões informadas para o desenvolvimento do projeto.
+
+=========================================
+TÉCNICAS DE LEVANTAMENTO DE REQUISITOS
+=========================================
+
+-----------------------------------------
+Entrevistas
+-----------------------------------------
+
+Metodologia: Entrevistas com stakeholders(clientes) para entender necessidades e expectativas. 
+Objetivo: Obter informações detalhadas diretamente dos envolvidos. 
+Vantagens: Insights profundos e flexibilidade. 
+Desvantagens: Demorado e depende da habilidade do entrevistador.
+
+-----------------------------------------
+Questionários
+-----------------------------------------
+
+Metodologia: Aplicação de formulários estruturados para obter dados quantitativos. 
+Objetivo: Coletar respostas rápidas de muitos stakeholders. 
+Vantagens: Eficiência e análise quantitativa fácil. 
+Desvantagens: Pouca profundidade e dificuldade em interpretar respostas vagas.
+
+-----------------------------------------
+Análise Documental
+-----------------------------------------
+
+Metodologia: Revisão de documentos existentes para entender o contexto atual. 
+Objetivo: Identificar necessidades e requisitos passados. 
+Vantagens: Menor custo e revela requisitos não expressos verbalmente. 
+Desvantagens: Pode estar desatualizado e difícil de extrair informações claras.
+
+-----------------------------------------
+Workshops
+-----------------------------------------
+
+Metodologia: Sessões colaborativas com stakeholders para discutir e definir requisitos. 
+Objetivo: Facilitar comunicação e entendimento mútuo. 
+Vantagens: Interatividade e colaboração. 
+Desvantagens: Dificuldade em conciliar agendas e risco de decisões não consensuais.
+
+-----------------------------------------
+Prototipação
+-----------------------------------------
+
+Metodologia: Criação de protótipos para visualizar funcionalidades antes da implementação. 
+Objetivo: Validar requisitos com uma representação tangível. 
+Vantagens: Feedback rápido e identificação precoce de falhas. 
+Desvantagens: Pode gerar expectativas irreais e ser custoso.
+
+=========================================
+PLANEJAMENTO - PERGUNTAS
+=========================================
+
+- Quais as principais dificuldades enfrentadas no método atual?
+
+- Quais os potenciais usuários que utilizariam o sistema?
+
+- Quais os "itens" que poderíamos adicionar ao sistema?
+
+- Quais os principais dados que devem ser considerados?
+
+- O que você espera de um sistema como esse?
+
+=========================================
+FONTES
+=========================================
+
+SOMMERVILLE, Ian. Engenharia de Software. 10. ed. São Paulo: Pearson, 2018.
+
+PRESSMAN, Roger S. Engenharia de Software: Uma Abordagem Profissional. 8. ed. Porto Alegre: McGraw-Hill, 2015.
+
+CUNHA, Marcos A. da. Desenvolvimento de Sistemas: Engenharia de Requisitos. São Paulo: Blucher, 2014.
