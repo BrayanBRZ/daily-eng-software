@@ -1,0 +1,92 @@
+=========================================
+ATIVIDADE EM EQUIPE
+=========================================
+
+Professor: Hélio Kamakawa
+Disciplina: Análise de Projetos de Sistemas
+Alunos: Brayan Barros e Gabriel dos Anjos
+Data: 29/04/25
+ 
+Tema: 
+	- Enviar Levantamento de Dados estruturado nas 7 fases e enviar pelo e-mail (helio.kamakawa@ifpr.edu.br).
+	- Elaborar o Diagrama de classe ou Diagrama de Entidade Relacionamento.
+
+=========================================
+LEVANTAMENTO DE REQUISISTOS
+=========================================
+1. Cadastro de Usuários
+
+[LRP001] O sistema deve permitir o cadastro de diferentes tipos de usuários (Aluno, Professor, Funcionário, etc.).
+  [LRE001] O sistema deve gerar um número de identificação único para cada usuário.
+  [LRE002] O sistema deve permitir a inserção do nome completo do usuário.
+  [LRE003] O sistema deve permitir a escolha do tipo de ocupação do usuário (Aluno, Professor, Funcionário, etc.).
+  [LRE004] O sistema deve permitir a inserção do número de matrícula (para alunos) ou campo genérico para os demais.
+  [LRE005] O sistema deve permitir a visualização de avaliação ou histórico de empréstimos do usuário.
+  [LRE006] O sistema deve permitir a inserção de e-mail para comunicação e alertas.
+  [LRE007] O sistema deve permitir a inserção de número de telefone para contato emergencial.
+  [LRE008] O sistema deve permitir a definição do status do usuário (Ativo, Suspenso, Inativo).
+
+------------------------
+2. Cadastro de Equipamentos
+
+[LRP002] O sistema deve permitir o cadastro de equipamentos, com registro completo de seus detalhes.
+  [LRE009] O sistema deve gerar um número de identificação único para cada equipamento.
+  [LRE010] O sistema deve permitir a inserção do nome do equipamento.
+  [LRE011] O sistema deve permitir a definição da classe do equipamento (ex: Instrumento musical, Calculadora, etc.).
+  [LRE012] O sistema deve permitir a descrição detalhada do equipamento.
+  [LRE013] O sistema deve permitir o controle do estado de conservação (Novo, Usado, Danificado).
+  [LRE014] O sistema deve permitir a inclusão da localização do equipamento.
+  [LRE015] O sistema deve permitir o registro de uma avaliação ou histórico de manutenção.
+  [LRE016] O sistema deve permitir a categorização do equipamento (Tecnologia, Mobiliário, Instrumentos, etc.).
+  [LRE017] O sistema deve registrar a data de aquisição do equipamento.
+  [LRE018] O sistema deve permitir o acompanhamento do histórico de manutenção (se aplicável).
+
+------------------------
+3. Cadastro de Locais
+   
+[LRP003] O sistema deve permitir o cadastro de locais, com todos os detalhes relevantes.
+  [LRE019] O sistema deve gerar um número de identificação único para cada local.
+  [LRE020] O sistema deve permitir a inserção do nome do local (ex: Auditório, Sala de Reuniões, etc.).
+  [LRE021] O sistema deve permitir a inserção da localização física (ex: Bloco A - Sala 101).
+  [LRE022] O sistema deve permitir a definição da capacidade máxima do local.
+  [LRE023] O sistema deve permitir o registro dos equipamentos disponíveis no local.
+  [LRE024] O sistema deve permitir o controle do estado de conservação (ex: Limpeza, Manutenção).
+  [LRE025] O sistema deve permitir avaliação do estado do local.
+  [LRE026] O sistema deve permitir a configuração dos horários de funcionamento do local.
+  [LRE027] O sistema deve permitir a definição de regras específicas para empréstimos do local.
+
+------------------------
+4. Controle de Equipamentos Emprestados
+   
+[LRP004] O sistema deve permitir o controle de empréstimos de equipamentos, com registro completo dos detalhes.
+  [LRE028] O sistema deve gerar um número de identificação único para cada empréstimo de equipamento.
+  [LRE029] O sistema deve permitir associar o empréstimo a um usuário.
+  [LRE030] O sistema deve permitir associar o empréstimo a um equipamento.
+  [LRE031] O sistema deve permitir definir a data de requisição do empréstimo.
+  [LRE032] O sistema deve permitir definir a data prevista para devolução.
+  [LRE033] O sistema deve registrar a data de devolução efetiva.
+  [LRE034] O sistema deve registrar o estado de conservação do equipamento na devolução.
+  [LRE035] O sistema deve permitir uma avaliação do equipamento no retorno.
+  [LRE036] O sistema deve controlar o status do empréstimo (Ativo, Concluído, Atrasado, Cancelado, etc.).
+  [LRE037] O sistema deve permitir registrar o motivo do empréstimo (opcional).
+
+------------------------
+5. Controle de Locais Emprestados
+   
+[LRP005] O sistema deve permitir o controle de empréstimos de locais, com todos os dados pertinentes.
+  [LRE038] O sistema deve gerar um número de identificação único para cada empréstimo de local.
+  [LRE039] O sistema deve permitir associar o empréstimo a um usuário.
+  [LRE040] O sistema deve permitir associar o empréstimo a um local.
+  [LRE041] O sistema deve permitir definir a data de requisição do local.
+  [LRE042] O sistema deve permitir definir a data e horário de uso do local.
+  [LRE043] O sistema deve permitir definir a data e hora da devolução (se aplicável).
+  [LRE044] O sistema deve registrar o estado de conservação do local na devolução.
+  [LRE045] O sistema deve permitir avaliação do local na devolução.
+  [LRE046] O sistema deve controlar o status do empréstimo (Ativo, Concluído, Atrasado, Cancelado).
+  [LRE047] O sistema deve permitir registrar equipamentos requisitados junto ao local (se houver).
+
+=========================================
+DIAGRAMA DE ENTIDADE E RELACIONAMENTO
+=========================================
+
+Em desenvolvimento...
