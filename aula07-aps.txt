@@ -1,0 +1,366 @@
+=========================================
+ATIVIDADE EM EQUIPE
+=========================================
+
+Professor: Hélio Kamakawa
+Disciplina: Análise de Projetos de Sistemas
+Alunos: Brayan Barros e Gabriel dos Anjos
+Data: 06/05/25
+
+Cronograma:
+  13/05 Entrega do documento final;
+  20/05 Retomada do conteúdo; Correções; Definição do conceito parcial;
+  27/05 Recuperação/Avaliação dissertativa.
+
+=========================================
+DOCUMENTO LATEX
+=========================================
+\documentclass[10pt]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{cite}
+
+\usepackage{enumitem}
+\usepackage{fmtcount}
+% Definir margens conforme especificação da SBC
+
+\geometry{
+  a4paper,
+  top=3cm,
+  bottom=2cm,
+  left=3cm,
+  right=2cm
+}
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{mathptmx} % Times New Roman
+
+\begin{document}
+
+
+% Capa
+
+\begin{titlepage}
+    \begin{center}
+        \large
+
+        % Nome da instituição
+        Instituto Federal do Paraná
+        
+        \vspace{5cm}
+
+        % Nome do autor
+        Brayan Barros e Gabriel Lucim
+
+        \vfill
+
+        % Título
+        \textbf{Sistema de Empréstimo de Recursos Escolares}
+
+        \vspace{3cm}
+
+        % Texto recuado à direita com minipage
+        \begin{flushright}
+            \begin{minipage}{0.6\textwidth}
+                \onehalfspacing
+                \noindent
+                Trabalho apresentado à disciplina de \textit{Análise e Projeto de Sistemas}, do 2º ano do curso de \textit{Engenharia de Software}, do Instituto Federal do Paraná, como parte dos requisitos para avaliação da unidade curricular.
+
+                \vspace{0.5cm}
+                \noindent
+                \textbf{Professor:} Hélio Toshio Kamakawa
+            \end{minipage}
+        \end{flushright}
+
+        \vfill
+
+        Paranavaí
+
+        \\[0.3cm]
+        2025
+
+    \end{center}
+\end{titlepage}
+
+
+
+
+\newpage
+
+\section{Visão Geral do Sistema}
+\subsection{Introdução}
+O sistema visa gerenciar de maneira eficiente e integrada o cadastro de usuários, equipamentos e locais, bem como o controle de empréstimos de equipamentos e espaços em uma instituição educacional. O objetivo é otimizar os processos internos e proporcionar maior agilidade para os usuários.
+
+\subsection{Público-alvo}
+O sistema é voltado para alunos, professores e funcionários da instituição, facilitando o processo de empréstimo e devolução de equipamentos e locais para diferentes atividades acadêmicas e administrativas.
+
+\subsection{Escopo}
+\textbf{Incluído:} Cadastro e controle de usuários, equipamentos e locais; registro de empréstimos; histórico de manutenção de equipamentos; controle de estado de conservação de locais e equipamentos.  
+\textbf{Excluído:} Integração com sistemas de pagamento, controle de acesso físico.
+
+\subsection{Benefícios Esperados}
+\begin{itemize}
+    \item Eficiência na gestão de recursos físicos (equipamentos e locais).
+    \item Redução de custos e perdas associadas a equipamentos e espaços.
+    \item Aumento da transparência e rastreabilidade no processo de empréstimos.
+    \item Melhoria no planejamento e organização dos espaços e equipamentos disponíveis.
+\end{itemize}
+
+\newpage
+
+\section{Pesquisa de Mercado}
+
+\subsection{2.1 Projetos Semelhantes}
+
+Listagem de pelo menos três projetos similares (com mesmo escopo). Critério de pesquisa/seleção: foram considerados sistemas de gestão de usuários, equipamentos e locais aplicados em instituições de ensino, com foco em soluções open source.
+
+\begin{itemize}
+    \item \textbf{leihs}: sistema open source voltado à gestão de inventário, reservas e empréstimos de equipamentos. Utilizado por universidades europeias e mantido por uma comunidade ativa. Permite controle de empréstimos e processos de aquisição.\\
+    Referência: \href{https://leihs.org}{leihs.org}
+    \item \textbf{Skedda}: plataforma SaaS para reservas de salas e espaços, com foco em interface moderna, automações e integração com calendários. Utilizada por instituições como MIT, Harvard e Columbia.\\
+    Referência: \href{https://www.skedda.com}{skedda.com}
+    \item \textbf{GLPI}: solução open source de gerenciamento de ativos de TI, incluindo controle de empréstimos, inventário, manutenção e helpdesk. Adotado por instituições públicas e educacionais no mundo todo.\\
+    Referência: \href{https://glpi-project.org}{glpi-project.org}
+\end{itemize}
+
+\subsection{Tabela Comparativa}
+
+\begin{table}[h!]
+    \centering
+    \setlength{\tabcolsep}{6pt}
+    \renewcommand{\arraystretch}{1.3}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Funcionalidade & leihs (OSS) & Skedda (SaaS) & GLPI (OSS) & Diferencial/Observações \\
+    \hline
+    Cadastro de usuários & Sim & Sim & Sim & Suporte a múltiplos perfis (alunos, professores, técnicos) \\
+    Reservas de equipamentos & Sim & Parcial & Sim & Skedda permite com addon; leihs e GLPI têm suporte nativo \\
+    Reservas de locais/salas & Não & Sim & Limitado & GLPI requer plugin; Skedda possui mapas interativos \\
+    Histórico de manutenção & Parcial & Não & Sim & GLPI segue fluxo ITIL; leihs registra ações básicas \\
+    Status e conservação de ativos & Sim & Não & Sim & Apenas leihs e GLPI monitoram condição dos itens \\
+    Relatórios e dashboards & Básico & Avançado & Avançado & Skedda e GLPI com recursos analíticos detalhados \\
+    Integração com procurement & Sim & Não & Não & Apenas o leihs oferece módulo para apoio à aquisição \\
+    \hline
+    \end{tabular}}
+    \caption{Tabela Comparativa dos Projetos}
+\end{table}
+\newpage
+
+
+\section{Requisitos do Sistema}
+
+\subsection{Técnicas de Levantamento de Requisitos}
+Para o levantamento de requisitos, foi utilizada a técnica de entrevistas com stakeholders. O padrão adotado para a especificação dos requisitos segue a norma \textbf{IEEE 830}.
+
+\subsection{Requisitos Funcionais}
+
+\begin{longtable}{|p{2.5cm}|p{7cm}|p{2.5cm}|p{3.5cm}|}
+\hline
+\textbf{ID} & \textbf{Descrição} & \textbf{Prioridade} & \textbf{Critérios de Aceitação} \\
+\hline
+LRP001 & O sistema deve permitir o cadastro de diferentes tipos de usuários (Aluno, Professor, Funcionário, etc.) & Alta & O sistema permite o cadastro e seleção do tipo de usuário. \\
+\hline
+LRE001 & O sistema deve gerar um número de identificação único para cada usuário. & Alta & Cada usuário recebe um identificador único no cadastro. \\
+\hline
+LRE002 & O sistema deve permitir a inserção do nome completo do usuário. & Alta & O campo de nome completo deve ser obrigatório. \\
+\hline
+LRE003 & O sistema deve permitir a escolha do tipo de ocupação do usuário. & Alta & O usuário pode selecionar seu tipo de ocupação entre as opções disponíveis. \\
+\hline
+LRE004 & O sistema deve permitir a inserção do número de matrícula (para alunos) ou campo genérico para os demais. & Alta & O sistema aceita matrícula para alunos ou campo alternativo para outros usuários. \\
+\hline
+LRE005 & O sistema deve permitir a visualização de avaliação ou histórico de empréstimos do usuário. & Média & O histórico ou avaliação pode ser consultado diretamente no perfil do usuário. \\
+\hline
+LRE006 & O sistema deve permitir a inserção de e-mail para comunicação e alertas. & Alta & O sistema valida e registra e-mail para notificações. \\
+\hline
+LRE007 & O sistema deve permitir a inserção de número de telefone para contato emergencial. & Média & O telefone pode ser inserido e atualizado no cadastro do usuário. \\
+\hline
+LRE008 & O sistema deve permitir a definição do status do usuário (Ativo, Suspenso, Inativo). & Alta & O status pode ser alterado conforme a situação do usuário. \\
+\hline
+LRP002 & O sistema deve permitir o cadastro de equipamentos, com registro completo de seus detalhes. & Alta & Equipamentos são cadastrados com todos os campos exigidos. \\
+\hline
+LRE009 & O sistema deve gerar um número de identificação único para cada equipamento. & Alta & Cada equipamento recebe um código único no sistema. \\
+\hline
+LRE010 & O sistema deve permitir a inserção do nome do equipamento. & Alta & O nome do equipamento é obrigatório no cadastro. \\
+\hline
+LRE011 & O sistema deve permitir a definição da classe do equipamento. & Alta & O usuário pode escolher a classe a partir de opções. \\
+\hline
+LRE012 & O sistema deve permitir a descrição detalhada do equipamento. & Alta & A descrição pode ser preenchida com detalhes técnicos ou observações. \\
+\hline
+LRE013 & O sistema deve permitir o controle do estado de conservação (Novo, Usado, Danificado). & Alta & O estado deve ser selecionado ao cadastrar ou atualizar. \\
+\hline
+LRE014 & O sistema deve permitir a inclusão da localização do equipamento. & Alta & A localização física do item deve ser registrada. \\
+\hline
+LRE015 & O sistema deve permitir o registro de uma avaliação ou histórico de manutenção. & Média & As manutenções ou avaliações podem ser registradas ao longo do uso. \\
+\hline
+LRE016 & O sistema deve permitir a categorização do equipamento. & Alta & A categoria deve ser escolhida entre opções como Tecnologia, Mobiliário, etc. \\
+\hline
+LRE017 & O sistema deve registrar a data de aquisição do equipamento. & Alta & A data de aquisição deve ser registrada obrigatoriamente. \\
+\hline
+LRE018 & O sistema deve permitir o acompanhamento do histórico de manutenção (se aplicável). & Média & O histórico deve ser consultável e atualizado conforme necessário. \\
+\hline
+LRP003 & O sistema deve permitir o cadastro de locais, com todos os detalhes relevantes. & Alta & Locais são cadastrados com dados de identificação, capacidade e regras. \\
+\hline
+LRE019 & O sistema deve gerar um número de identificação único para cada local. & Alta & Cada local cadastrado recebe um código único. \\
+\hline
+LRE020 & O sistema deve permitir a inserção do nome do local. & Alta & O nome do local é obrigatório no formulário de cadastro. \\
+\hline
+LRE021 & O sistema deve permitir a inserção da localização física. & Alta & A localização física deve estar visível no cadastro. \\
+\hline
+LRE022 & O sistema deve permitir a definição da capacidade máxima do local. & Alta & A capacidade máxima pode ser informada no cadastro. \\
+\hline
+LRE023 & O sistema deve permitir o registro dos equipamentos disponíveis no local. & Alta & Os equipamentos são associados ao local no momento do cadastro ou edição. \\
+\hline
+LRE024 & O sistema deve permitir o controle do estado de conservação. & Alta & O estado de conservação do local deve ser registrado e atualizado. \\
+\hline
+LRE025 & O sistema deve permitir avaliação do estado do local. & Média & O avaliador pode registrar nota ou parecer sobre o estado atual do local. \\
+\hline
+LRE026 & O sistema deve permitir a configuração dos horários de funcionamento do local. & Alta & Os horários devem ser definidos no momento do cadastro do local. \\
+\hline
+LRE027 & O sistema deve permitir a definição de regras específicas para empréstimos do local. & Alta & Regras como tempo máximo ou restrições podem ser inseridas e consultadas. \\
+\hline
+LRP004 & O sistema deve permitir o controle de empréstimos de equipamentos, com registro completo dos detalhes. & Alta & Cada empréstimo deve registrar todos os dados necessários. \\
+\hline
+LRE028 & O sistema deve gerar um número de identificação único para cada empréstimo de equipamento. & Alta & O sistema gera um ID único por empréstimo. \\
+\hline
+LRE029 & O sistema deve permitir associar o empréstimo a um usuário. & Alta & O empréstimo deve estar vinculado a um usuário registrado. \\
+\hline
+LRE030 & O sistema deve permitir associar o empréstimo a um equipamento. & Alta & Um ou mais equipamentos devem ser relacionados ao empréstimo. \\
+\hline
+LRE031 & O sistema deve permitir definir a data de requisição do empréstimo. & Alta & A data de solicitação deve ser registrada. \\
+\hline
+LRE032 & O sistema deve permitir definir a data prevista para devolução. & Alta & O sistema exige uma data estimada de devolução. \\
+\hline
+LRE033 & O sistema deve registrar a data de devolução efetiva. & Alta & A devolução deve ser registrada quando ocorrer. \\
+\hline
+LRE034 & O sistema deve registrar o estado de conservação do equipamento na devolução. & Alta & O usuário deve informar o estado ao devolver. \\
+\hline
+LRE035 & O sistema deve permitir uma avaliação do equipamento no retorno. & Média & A avaliação pode ser feita por quem recebe o equipamento de volta. \\
+\hline
+LRE036 & O sistema deve controlar o status do empréstimo. & Alta & Os status possíveis são Ativo, Concluído, Atrasado, Cancelado. \\
+\hline
+LRE037 & O sistema deve permitir registrar o motivo do empréstimo (opcional). & Média & O campo de motivo pode ser preenchido se necessário. \\
+\hline
+LRP005 & O sistema deve permitir o controle de empréstimos de locais, com todos os dados pertinentes. & Alta & Cada empréstimo de local deve ser devidamente registrado e acompanhado. \\
+\hline
+LRE038 & O sistema deve gerar um número de identificação único para cada empréstimo de local. & Alta & Um código único é gerado por empréstimo de local. \\
+\hline
+LRE039 & O sistema deve permitir associar o empréstimo a um usuário. & Alta & O usuário responsável deve estar vinculado ao empréstimo. \\
+\hline
+LRE040 & O sistema deve permitir associar o empréstimo a um local. & Alta & O local requisitado deve constar no empréstimo. \\
+\hline
+LRE041 & O sistema deve permitir definir a data de requisição do local. & Alta & A data da solicitação deve ser registrada. \\
+\hline
+LRE042 & O sistema deve permitir definir a data e horário de uso do local. & Alta & Deve ser possível definir período de uso do local. \\
+\hline
+LRE043 & O sistema deve permitir definir a data e hora da devolução (se aplicável). & Alta & Se necessário, a devolução deve ter data/hora registrada. \\
+\hline
+LRE044 & O sistema deve registrar o estado de conservação do local na devolução. & Alta & O avaliador deve indicar o estado do local ao final do uso. \\
+\hline
+LRE045 & O sistema deve permitir avaliação do local na devolução. & Média & O local pode ser avaliado conforme uso. \\
+\hline
+LRE046 & O sistema deve controlar o status do empréstimo. & Alta & O status pode ser Ativo, Concluído, Atrasado ou Cancelado. \\
+\hline
+LRE047 & O sistema deve permitir registrar equipamentos requisitados junto ao local. & Média & É possível listar equipamentos vinculados ao empréstimo do local. \\
+\hline
+\end{longtable}
+
+\newpage
+
+\section{Modelagem do Sistema}
+
+\subsection{Referências das Técnicas Utilizadas}
+Para a realização da modelagem UML foi utilizado o VS Code com a extensão PlantUML para a criação de um Diagrama de Entidade-Relacionamento (DER), e com o auxílio do conteúdo aprendido em sala de aula e pesquisas sobre a montagem do código.(Figura~\ref{fig:diagramaDER}).
+
+\subsection{Diagramas UML}
+\begin{figure}[!tb]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/DER.png}
+    \caption{Diagrama de Entidade-Relacionamento do Projeto}
+    \label{fig:diagramaDER}
+\end{figure}
+
+=========================================
+DIAGRAMA DE ENTIDADE E RELACIONAMENTO
+=========================================
+
+@startuml
+
+left to right direction
+
+entity Usuario {
+    +ID_Usuario : int
+    Nome_Completo : string
+    Tipo_Ocupacao : string
+    Matricula : string
+    Email : string
+    Telefone : string
+    Status : string
+    Avaliacao_Historico : int
+}
+
+entity Equipamento {
+    +ID_Equipamento : int
+    Nome : string
+    Classe : string
+    Descricao : string
+    Estado_Conservacao : string
+    Localizacao : string
+    Avaliacao_Equipamento : int
+    Categoria : string
+    Data_Aquisicao : Date
+    Historico_Manutencao : string
+}
+
+entity Local {
+    +ID_Local : int
+    Nome_Local : string
+    Localizacao : string
+    Capacidade_Maxima : int
+    Estado_Conservacao : string
+    Avaliacao_Local : int
+    Horarios_Funcionamento : string
+    Regras_Emprestimo : string
+}
+
+entity Emprestimo_Equipamento {
+    +ID_Emprestimo_Equipamento : int
+    Data_Requisicao : Date
+    Data_Devolucao_Prevista : Date
+    Data_Devolucao_Efetiva : Date
+    Estado_Equipamento_Devolucao : int
+    Status_Emprestimo : string
+    Motivo_Emprestimo : string
+}
+
+entity Emprestimo_Local {
+    +ID_Emprestimo_Local : int
+    Data_Requisicao : Date
+    Data_Hora_Emprestimo : Date
+    Data_Hora_Devolucao : Date
+    Estado_Local_Devolucao : int
+    Status_Emprestimo_Local : string
+    Equipamentos_Requisitados : string
+}
+
+' Relacionamentos
+Usuario ||--o{ Emprestimo_Equipamento : Realiza
+Usuario ||--o{ Emprestimo_Local : Realiza
+
+Equipamento ||--o{ Emprestimo_Equipamento : Emprestado
+Local ||--o{ Emprestimo_Local : Emprestado
+
+Local ||--o{ Equipamento : Contém
+
+@enduml
+
+\end{document}
