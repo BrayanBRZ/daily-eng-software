@@ -347,6 +347,103 @@ DIAGRAMA DE CASOS DE USO
 =========================================
 
 @startuml
+
+left to right direction
+
+' Entidades principais
+entity Usuario {
+    +idUsuario : int
+    nomeCompleto : string
+    tipoOcupacao : string
+    matriculaOuId : string
+    email : string
+    telefone : string
+    status : string
+}
+
+entity Equipamento {
+    +idEquipamento : int
+    nome : string
+    classe : string
+    descricao : string
+    estadoConservacao : string
+    localizacao : string
+    categoria : string
+    dataAquisicao : Date
+}
+
+entity Local {
+    +idLocal : int
+    nome : string
+    localizacao : string
+    capacidadeMaxima : int
+    estadoConservacao : string
+    horariosFuncionamento : string
+    regrasEmprestimo : string
+}
+
+entity EmprestimoEquipamento {
+    +idEmprestimoEquipamento : int
+    idUsuario : int
+    dataRequisicao : Date
+    dataPrevistaDevolucao : Date
+    dataDevolucaoEfetiva : Date
+    estadoConservacaoDevolucao : string
+    status : string
+    motivo : string
+}
+
+entity EmprestimoLocal {
+    +idEmprestimoLocal : int
+    idUsuario : int
+    idLocal : int
+    dataRequisicao : Date
+    dataHoraUsoInicio : datetime
+    dataHoraUsoFim : datetime
+    dataHoraDevolucao : datetime
+    estadoConservacaoDevolucao : string
+    status : string
+    motivo : string
+}
+
+' Tabelas associativas
+entity EquipamentoEmprestado {
+    +idEmprestimoEquipamento : int
+    +idEquipamento : int
+}
+
+entity EquipamentoRequisitadoLocal {
+    +idEmprestimoLocal : int
+    +idEquipamento : int
+}
+
+entity EquipamentoLocal {
+    +idLocal : int
+    +idEquipamento : int
+}
+
+' Relacionamentos
+Usuario ||--o{ EmprestimoEquipamento : realiza
+Usuario ||--o{ EmprestimoLocal : reserva
+
+EmprestimoEquipamento ||--o{ EquipamentoEmprestado : contém
+Equipamento ||--o{ EquipamentoEmprestado : é emprestado em
+
+EmprestimoLocal ||--o{ EquipamentoRequisitadoLocal : requisita
+Equipamento ||--o{ EquipamentoRequisitadoLocal : é requisitado em
+
+Local ||--o{ EquipamentoLocal : possui
+Equipamento ||--o{ EquipamentoLocal : está em
+
+Local ||--o{ EmprestimoLocal : é emprestado
+
+@enduml
+
+=========================================
+DIAGRAMA DE CASOS DE USO
+=========================================
+
+@startuml
 left to right direction
 
 actor "Administrador" as Admin
