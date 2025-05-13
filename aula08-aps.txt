@@ -343,7 +343,7 @@ Para a realização da modelagem UML foi utilizado o VS Code com a extensão Pla
 \end{document}
 
 =========================================
-DIAGRAMA DE CASOS DE USO
+DIAGRAMA DE ENTIDADE E RELACIONAMENTO
 =========================================
 
 @startuml
