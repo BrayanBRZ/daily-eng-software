@@ -1,0 +1,55 @@
+=========================================
+DESENVOLVIMENTO PARA DISPOSITIVOS MÓVEIS
+=========================================
+
+Esta disciplina não é apenas sobre aprender uma tecnologia.
+Ela é sobre aproveitar melhor o tempo, entender o ecossistema no qual vocês se desenvolvem — em aula, em casa e no mercado.
+
+=========================================
+ATIVIDADE EM EQUIPE
+=========================================
+
+Professor: Hélio Kamakawa
+Disciplina: Desenvolvimento para Dispositivos Móveis
+Alunos: Brayan Barros e Gabriel dos Anjos
+Data: 09/01/26
+
+Tema: Formação/Ecossistema
+
+Pesquise e discuta em equipe:
+
+- O que as empresas buscam em um profissional?
+    - Quais habilidades técnicas?
+    - Soft skills ou habilidades técnicas?
+Fontes confiáveis incluem:
+- Ecossistema (rede de ações pessoais):
+    - o que é? caras e nomes diferentes - é o mais valioso de todos!
+- Uso de IA:
+    - Pode usar?
+    - Quais os limites?
+    - Qual é a sua responsabilidade?
+- Como as empresas trabalham em projetos?
+    - Equipes?
+    - Prática ou teoria
+    - Como acontece a avaliação
+- Diante desse contexto (IA, mercado, ecossistema), quais são os maiores desafios da disciplina de Desenvolvimento para Dispositivos Móveis (DDM)?
+
+Resposta:
+
+- As empresas procuram profissionais com conhecimento técnico sólido, capacidade de resolver problemas, aprender rápido e trabalhar em equipe. Valorizam quem entrega resultados e se adapta às mudanças.
+
+- Programação, lógica, uso de frameworks, versionamento (Git), noções de arquitetura, testes e entendimento do negócio.
+
+- Ambas são importantes. As técnicas garantem a execução, mas soft skills (comunicação, colaboração, responsabilidade e proatividade) muitas vezes fazem a diferença para crescimento e permanência.
+
+- Ecossistema: É o conjunto de relações, experiências, hábitos, conhecimentos e atitudes que o profissional constrói ao longo do tempo. Também pode ser chamado de networking, ambiente profissional, rede de contatos ou capital social.
+É considerado o mais valioso porque influencia oportunidades de aprendizado, indicações, troca de conhecimento e crescimento na carreira, muitas vezes mais do que apenas o conhecimento técnico.
+
+- A IA pode ser usada como ferramenta de apoio (aprendizado, produtividade, revisão de código).
+Os limites envolvem não copiar respostas prontas, não fraudar atividades e sempre compreender o que está sendo usado.
+
+- As empresas geralmente atuam com equipes multidisciplinares, organizadas por papéis (desenvolvedores, designers, testers, gestores).
+O foco é muito mais em prática do que apenas teoria, com uso de metodologias ágeis, entregas frequentes e melhoria contínua.
+A avaliação ocorre por resultados, qualidade das entregas, cumprimento de prazos, colaboração em equipe e capacidade de resolver problemas, não apenas pelo conhecimento teórico.
+
+- Usar a IA de forma ética e consciente, desenvolver autonomia e pensamento crítico, equilibrar teoria e prática, trabalhar bem em equipe e acompanhar a rápida evolução das tecnologias móveis, gerenciando bem o tempo e o aprendizado contínuo.
