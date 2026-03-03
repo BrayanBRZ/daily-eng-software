@@ -1,0 +1,45 @@
+=========================================
+DESENVOLVIMENTO PARA DISPOSITIVOS MÓVEIS
+=========================================
+ATIVIDADE EM EQUIPE
+
+Professor: Hélio Kamakawa
+Disciplina: Desenvolvimento para Dispositivos Móveis
+Alunos: Brayan Barros e Gabriel Lucim
+Data: 02/03/26
+
+Tema Geral: Fundamentos do Dart
+
+A aula foi realizada em formato de seminário, com apresentações em grupo sobre os fundamentos da linguagem Dart, reforçando tanto o conteúdo técnico quanto a prática de comunicação e trabalho em equipe.
+
+APRESENTAÇÃO DO NOSSO GRUPO (1)
+
+Tipos de variáveis no Dart
+
+Variáveis declarativas (tipagem explícita)
+
+Variáveis por inferência
+
+Quando utilizar cada forma
+
+Conversão de dados
+
+Apresentamos como o Dart trabalha com tipagem, explicando a diferença entre declarar o tipo explicitamente e permitir que a linguagem faça a inferência automaticamente. Também mostramos situações ideais para cada caso e exemplos de conversão entre tipos, reforçando a importância de entender bem os dados que estão sendo manipulados no código.
+
+APRESENTAÇÕES ASSISTIDAS
+
+dynamic, final e const
+Aprendemos como o dynamic permite maior flexibilidade por aceitar diferentes tipos em tempo de execução, enquanto final define variáveis que só podem receber valor uma única vez e const representa valores constantes definidos em tempo de compilação, trazendo mais segurança e organização ao código.
+
+Null Safety
+Foi explicado como o Dart evita erros causados por valores nulos, diferenciando variáveis anuláveis e não anuláveis. Entendemos o uso do ? para permitir nulo e do ! para afirmar que um valor não é nulo, além da importância desse recurso para reduzir falhas em tempo de execução.
+
+Funções e métodos
+Aprendemos como declarar funções com e sem retorno, com e sem parâmetros, entendendo como elas organizam e reutilizam blocos de código.
+Também vimos parâmetros opcionais, nomeados e posicionais, compreendendo como eles oferecem mais flexibilidade na chamada das funções.
+
+Funções anônimas e função como parâmetro
+Foi mostrado como criar funções sem nome e utilizá-las em situações específicas, além de passar funções como argumento para outras funções, conceito muito utilizado em programação moderna.
+
+Classes e objetos
+Aprendemos a estrutura básica de uma classe, seus elementos (atributos e métodos) e como instanciar objetos. Esse conteúdo reforçou os conceitos de programação orientada a objetos dentro do Dart.
