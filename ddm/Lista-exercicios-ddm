@@ -1,0 +1,250 @@
+# Lista de Exercícios — Reflexão e Teoria
+
+## Parte 1 — Motivação e reflexão
+
+1. Por que estamos estudando persistência manual utilizando SQLite e DAO sem utilizar frameworks ORM prontos?
+
+R: Para a compreensão melhorada do que o framework faz por conta própria com ORM/MOR.
+
+2. Quais conhecimentos importantes podem ser perdidos quando o desenvolvedor depende apenas de frameworks ou geração automática por IA?
+
+R: Praticamente todos podem ser perdidos, ainda mais dependendo da quantidade e responsabilidade que o desenvolvedor tem com o projeto.
+
+3. Explique por que compreender o fluxo completo de persistência é importante mesmo quando ferramentas automatizam parte do processo.
+
+R: Pois nem sempre as ferramentas possuem conhecimento de uma falha que  pode haver no sistema, e para isso o conhecimento de POO do desenvolvedor é crucial, identificar falhas e resolvê-las, coisa que a IA não consegue executar de maneira tão eficiente.
+
+4. Cite vantagens e desvantagens de utilizar IA para gerar código de persistência.
+
+R: As vantagens se baseiam na praticidade, velocidade, automatização e altíssima produção em massa, porém as desvantagens pesam no fator de funcionalidades, otimização, documentação, organização, que são coisas que um desenvolvedor bem estudado pode realizar.
+
+5. Qual o risco de utilizar código gerado por IA sem compreender:
+
+   * consultas;
+   * mapeamento;
+   * regras;
+   * fluxo dos dados?
+
+R: Todos podem estar sendo implementados de maneira equivocada e de má prática, por exemplo um fluxo incorreto de dados ou falta de segurança em consultas, mapeamentos e fluxo, além de regras que não foram cumpridas totalmente.
+
+6. Em quais situações do mercado um desenvolvedor precisará compreender:
+
+   * SQL;
+   * persistência;
+   * consultas;
+   * mapeamento manual;
+     mesmo utilizando frameworks modernos?
+R: Em situações de um produto com um grande escopo e complexidade alta, aonde uma falha pode não ser identificada pela IA e o desenvolvedor precisa ter total conhecimento de como o projeto funciona e seu fluxo.
+
+7. Explique a diferença entre:
+
+   * copiar código;
+   * compreender código;
+   * conseguir adaptar código.
+
+R: Copiar código não se aprende e nem absorve nenhum conhecimento. Compreender o código auxilia no entendimento de como o programa funciona e auxilia na resolução de problemas e adaptação do código, que sempre precisa ser otimizado para se manter a nível profissional.
+
+8. Por que saber depurar problemas de banco de dados é importante?
+
+R: Saber depurar o banco de dados é vital porque o banco costuma ser o gargalo de performance, erros silenciosos e falhas de seguranças difíceis de encontrar.
+
+9. O que pode acontecer quando o desenvolvedor não entende:
+
+   * o funcionamento do DAO;
+   * o fluxo de persistência;
+   * o relacionamento entre objetos e tabelas?
+
+R: Caso o desenvolvedor não compreenda os aspectos básicos de persistência, a gerência de conexões com o database se torna potencialmente precária, o que pode resultar em sérios problemas quando diversos clientes tentam utilizar a aplicação ao mesmo tempo ou a longo prazo, pela dificuldade de escalonamento do produto e manutenabilidade.
+
+10. Explique por que estamos implementando o DAO manualmente antes de utilizar soluções mais automatizadas.
+
+R: Estamos implementando DAO manualmente para compreendermos os conceitos básicos de comunicação e gerenciamento de conexão com o database. Para posteriormente, termos mais controle na tomada de decisão e visão sobre o código, database e frameworks.
+---
+
+# Parte 2 — Conceitos teóricos
+
+11. O que é DAO (Data Access Object)?
+
+R: Se trata da classe de manipulação de dados e persistência de uma aplicação.
+
+12. Qual a responsabilidade principal de um DAO?
+
+R: Manipular os dados do banco de dados.
+
+13. Qual a diferença entre:
+
+* Model;
+* DAO;
+* Banco de dados?
+
+R: 
+- Model: Tratam-se das classes que representam as entidades que compõem a aplicação
+- DAO: São as classes que manipulam os dados do Banco de dados. Geralmente estão associados a entidades específicas.
+- Banco de dados/database: É a aplicação que fica responsável por gerenciar o armazenamento dos dados de maneira não volátil. 
+
+14. Explique o fluxo:
+
+* interface → DAO → SQLite.
+
+R: Trata-se de um fluxo básico de persistência, onde existe uma interface que o usuário utiliza para se comunicar com o DAO(classe de manipulação de dados), a qual se comunica com o próprio banco de dados, onde as informações são gerenciadas e armazenadas.
+
+15. Explique o fluxo:
+
+* SQLite → DAO → objeto → interface.
+
+R: Consiste-se no caminho das informações do banco de dados até o usuário, onde a informação armazenada no banco é levada ao DAO, o qual pega a informação e o transforma em um objeto, que pode ser lido pelo usuário através a interface.
+
+16. Por que o modelo `Cidade` foi mantido sem:
+
+* `toMap()`;
+* `fromMap()`?
+
+R: Por que o modelo Cidade foi mantido sem toMap() e fromMap()?
+R: Para garantir o desacoplamento total. Ao remover esses métodos, a classe Cidade torna-se um objeto puro (POJO/Entity), sem conhecimento algum sobre formatos de persistência ou chaves de banco de dados.
+
+17. Qual a vantagem de deixar o mapeamento dentro do DAO?
+
+R: Deixar o mapeamento no DAO centraliza a tradução entre objetos e tabelas, garantindo o encapsulamento. Isso protege a lógica de negócio de mudanças no banco de dados, facilita a manutenção ao isolar o SQL e respeita o Princípio de Responsabilidade Única, evitando que a entidade conheça detalhes da infraestrutura.
+
+18. O que significa “separação de responsabilidades”?
+
+R: Significa dividir o sistema em partes onde cada componente cuida de apenas uma tarefa. Em vez de uma classe fazer tudo, você separa a interface, a lógica de negócio e o acesso aos dados. Isso torna o código mais fácil de manter, testar e evoluir sem gerar efeitos colaterais.
+
+19. Explique o conceito de coesão aplicado ao DAO.
+
+R: Coesão no DAO significa que a classe deve ser especialista: ela faz apenas o acesso a dados de uma única entidade. Um DAO coeso não valida regras de negócio nem processa cálculos; ele apenas traduz e envia informações para o banco. Quanto mais focado ele for, mais fácil será de manter e reutilizar.
+
+20. Explique o conceito de desacoplamento aplicado ao modelo.
+
+R: Desacoplamento no modelo significa que suas classes de negócio são independentes da infraestrutura. O objeto (ex: Cliente) não sabe e não depende de como será salvo, seja em SQL, JSON ou nuvem. Isso permite alterar a tecnologia de banco de dados sem precisar tocar ou quebrar as regras de negócio do sistema.
+
+21. Qual a função do `Future`?
+
+R: O Future é um "recibo" de uma operação assíncrona. Ele representa um valor que ainda não existe, mas que estará disponível em algum momento. Sua função é permitir que o programa continue rodando outras tarefas sem travar (non-blocking) enquanto aguarda o resultado de um processo demorado, como uma consulta ao banco ou uma chamada de API.
+
+22. Por que operações de banco normalmente utilizam `async/await`?
+
+R: Operações de banco utilizam “async/await” para evitar o travamento da aplicação. Como a comunicação com o banco é lenta comparada à CPU, o “async” permite que o servidor atenda outras requisições enquanto espera a resposta, garantindo escalabilidade e uma interface responsiva sem desperdiçar recursos do sistema.
+
+23. O que pode acontecer se operações de banco forem executadas de forma síncrona na interface?
+
+R: Se operações de banco forem síncronas na interface, o sistema sofre o congelamento da interface. Como a CPU fica travada esperando a resposta do banco, o usuário não consegue clicar em nada, as animações param e o app parece ter "crashado". Em servidores, isso derruba a performance, pois um único processo lento impede que todas as outras requisições sejam processadas.
+
+24. Qual a função do `whereArgs`?
+
+R: O whereArgs serve para sanitizar e substituir valores em uma query SQL, prevenindo ataques de SQL Injection. Em vez de concatenar valores diretamente na string, você usa interrogações (?) e passa os dados reais pelo whereArgs. O banco então trata esses dados puramente como texto, impedindo que comandos maliciosos sejam executados como código.
+
+25. Por que consultas parametrizadas são importantes?
+
+R: Elas garantem a segurança e a integridade. Ao separar o comando SQL dos dados, o banco processa a lógica primeiro, impedindo que entradas de usuário maliciosas alterem a estrutura da consulta.
+
+26. Explique o risco de SQL Injection.
+
+R: É uma vulnerabilidade onde um invasor insere comandos SQL nos campos de entrada. Sem proteção, o banco executa esse código, permitindo que o hacker apague tabelas, roube dados ou ignore autenticações.
+
+27. Qual a diferença entre:
+
+* `insert`;
+* `update`;
+* `delete`;
+* `query`?
+
+R: São operações CRUD: Insert cria novos registros; Update altera dados existentes; Delete remove registros; e Query consulta/recupera informações do banco.
+
+28. Por que `buscarPorId` pode retornar `null`?
+
+R: Porque o ID fornecido pode não existir no banco. O retorno null é a forma segura de dizer à interface que nenhum registro correspondente foi encontrado.
+
+29. Qual a diferença entre:
+
+* objeto;
+* tabela;
+* registro;
+* `Map<String, dynamic>`?
+
+R: Objeto é a instância na memória (OO); Tabela é a estrutura de armazenamento; Registro é uma linha da tabela; e Map é a estrutura intermediária (chave/valor) usada para converter um no outro.
+
+30. Explique o que significa mapear:
+
+* objeto ↔ banco de dados.
+
+R: É o processo de tradução: transformar os atributos de uma classe (ex: nome) em colunas de uma tabela e vice-versa, garantindo que os dados persistidos reflitam o estado do objeto.
+
+31. Qual a diferença entre:
+
+* associação no banco;
+* associação orientada a objetos?
+
+R: No banco, associações usam Chaves Estrangeiras (IDs). Em objetos, usamos referências diretas (um objeto dentro do outro), permitindo navegar pelos dados sem lidar com chaves manualmente.
+
+32. Por que a aplicação trabalha com objetos enquanto o banco trabalha com IDs?
+
+R: Objetos permitem usar comportamento e lógica (métodos), facilitando o desenvolvimento. O banco usa IDs porque o modelo relacional é baseado em conjuntos e chaves primárias para garantir unicidade e relacionamentos.
+
+33. Qual o papel do DAO na tradução entre:
+
+* modelo relacional;
+* modelo orientado a objetos?
+
+R: O DAO atua como um Adaptador: ele lê as linhas da tabela (relacional), instancia os objetos e preenche seus atributos, resolvendo a diferença de estrutura entre os dois modelos.
+
+---
+
+# Parte 3 — Análise e raciocínio
+
+34. O que aconteceria se o método `update` fosse chamado com `id = null`?
+
+R: A operação falharia ou alteraria o registro errado. Sem um ID válido na cláusula WHERE, o banco não consegue localizar qual linha específica deve ser atualizada.
+
+35. O que aconteceria se o banco retornasse uma lista vazia?
+
+R: A aplicação deve tratar isso como "nenhum resultado encontrado". Se não houver tratamento, tentar acessar o primeiro elemento da lista causará um erro de execução (crash).
+
+36. Por que o código verifica:
+
+```dart id="pwwm4q"
+resultado.isEmpty
+```
+
+antes de acessar:
+
+```dart id="bwx2zk"
+resultado.first
+```
+
+R: Para evitar o erro de Index Out of Bounds. Tentar acessar .first em uma lista vazia interrompe o programa; a verificação garante que o dado existe antes do acesso.
+
+37. Qual a vantagem de centralizar o mapeamento no DAO?
+
+R: Facilita a manutenção: se a estrutura do banco mudar, você altera apenas o DAO. Isso evita que mudanças de banco "vazem" e quebrem o restante do sistema.
+
+38. Quais problemas podem surgir quando regras de negócio começam a ser colocadas dentro do DAO?
+
+R: O DAO perde a coesão, o código fica difícil de testar e as regras ficam "escondidas" na camada de dados, dificultando sua reutilização em outras partes do sistema.
+
+39. O que poderia ser melhorado no DAO apresentado?
+
+R: Poderia ser incluída uma camada de tratamento de exceções (try/catch), o uso de uma classe abstrata/interface para padronização e a implementação de logs para depuração.
+
+40. Em um projeto maior, quais dificuldades surgem se o DAO crescer excessivamente?
+
+R: Torna-se um "Objeto Deus" (difícil de manter), o tempo de compilação pode aumentar e o risco de efeitos colaterais ao alterar um método simples cresce drasticamente.
+
+41. Diferença entre implementação funcional, organizada e sustentável:
+
+R: Funcional apenas resolve o problema; Organizada segue padrões e é fácil de ler; Sustentável é fácil de evoluir e manter a longo prazo sem gerar dívida técnica.
+
+42. O que significa “persistir dados”?
+
+R: É salvar informações em um meio de armazenamento não volátil (como um disco), garantindo que os dados sobrevivam mesmo após o fechamento da aplicação ou desligamento do dispositivo.
+
+43. Por que a base manual facilita aprender frameworks avançados?
+
+R: Porque você entende os conceitos (SQL, conexões, mapeamento) que o framework automatiza. Assim, quando algo falha no framework, você sabe investigar o que está ocorrendo por baixo.
+
+44. O que acontece com a associação entre entidades em caso de exclusão ou erro?
+R: Pode ocorrer o erro de integridade referencial (uma chave apontando para o nada), gerando registros "órfãos" ou falhas em cascatas se as restrições de banco não estiverem bem definidas.
+
+45. Como o DAO ajuda a manter a integridade da associação?
+
+R: O DAO pode garantir que, ao buscar um objeto, todos os seus dependentes sejam carregados corretamente e que, ao salvar, os IDs das chaves estrangeiras estejam preenchidos corretamente.
